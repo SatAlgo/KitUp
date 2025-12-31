@@ -1,0 +1,134 @@
+[
+    {
+        "id":1,
+        "name":"Casio Watch",
+        "title":"",
+        "price":899,
+        "category":"For Sale",
+        "image":"/Casio_MRW.jpg",
+        "contact": "7822099563",
+        "description":"The Casio MRW-200HC-2BVDF is a sporty, durable watch with quartz movement, 100m water resistance, and a resin strap."
+    },
+    {
+        "id":2,
+        "name":"Speaker",
+        "title":"",
+        "price":999,
+        "category":"For Sale",
+        "image":"speakerJojo.jpg",
+        "contact": "7822099563",
+        "description":"The Blaupunkt SBA20 Bluetooth soundbar features dual passive radiators for immersive surround sound, has a slim design with a 16W output, and supports 3.5mm aux input for use with TVs, PCs, phones, and more."
+    },
+    {
+        "id":3,
+        "name":"Study Table",
+        "title":"",
+        "price":479,
+        "category":"For Sale",
+        "image":"/StudyTable.jpg",
+        "contact": "7822099563",
+        "description":"The Foldable Study Table is a versatile, compact table with adjustable incline, a foldable design for easy storage, and a whiteboard surface for convenient note-taking."
+    },
+    {
+        "id":4,
+        "name":"Study Table",
+        "title":"",
+        "price":479,
+        "category":"For Sale",
+        "image":"/StudyTable.jpg",
+        "contact": "7822099563",
+        "description":"The Foldable Study Table is a versatile, compact table with adjustable incline, a foldable design for easy storage, and a whiteboard surface for convenient note-taking."
+    },
+    {
+        "id":5,
+        "name":"Roommate Required",
+        "title":"",
+        "price":479,
+        "category":"Flex",
+        "contact": "tel:7822099563",
+        "description":"A 1BHK flat at Crystal Heights, Dehu Phata, is available for ₹3750/month (₹15,000/4) with amenities including 5 beds, 2 balconies, 2 geyser-equipped washrooms, a kitchen with a water purifier, a lift and much more. No deposit required. Contact:- 7822099563"
+    },
+    
+    
+
+
+
+
+
+    {
+        "id":10,
+        "name":"Computer Graphics",
+        "title":"no image awailable",
+        "price":0,
+        "category":"Asgn3",
+        "image":"ass.png",
+        "description":"Boost skills with real-world experience through top internships.",
+        "link": "https://1drv.ms/f/c/fc1755c51a0b0c9f/EgFfmfUap5ZNqHwFihC6r1YB28MyZB7Q4re2KiwaYvSGCQ"
+    },
+    {
+        "id":11,
+        "name":"C_O_A",
+        "title":"no image awailable",
+        "price":0,
+        "category":"Asgn3",
+        "image":"ass.png",
+        "description":"Boost skills with real-world experience through top internships.",
+        "link": "https://1drv.ms/f/c/fc1755c51a0b0c9f/EtdX5jujR-5Cqxn65Cm_CeEBD6FbGK1zM7ZcV4bXrmUAJA"
+    },
+    {
+        "id":12,
+        "name":"Data Structure",
+        "title":"no image awailable",
+        "price":0,
+        "category":"Asgn3",
+        "image":"ass.png",
+        "description":"Boost skills with real-world experience through top internships.",
+        "link": "https://1drv.ms/f/c/fc1755c51a0b0c9f/EhT0m6be6a1DpuDv0wTBeiMBo1WomdcWHDWXgZlrMpJr9w"
+    },
+    {
+        "id":13,
+        "name":"JAVA",
+        "title":"no image awailable",
+        "price":0,
+        "category":"Asgn3",
+        "image":"ass.png",
+        "description":"Boost skills with real-world experience through top internships.",
+        "link": "https://1drv.ms/f/c/fc1755c51a0b0c9f/EhpGsYFiPbtLgiiXCreWAFABF0zJmkLAE21cskakztqKmQ"
+    },
+
+    {
+        "id":14,
+        "name":"Matlab",
+        "title":"no image awailable",
+        "price":0,
+        "category":"Asgn3",
+        "image":"ass.png",
+        "description":"Boost skills with real-world experience through top internships.",
+        "link": "https://1drv.ms/f/c/fc1755c51a0b0c9f/EhDW0nnIitxBr_XmYG7JUP4B4Y0DSFslY2SDA4sUwCbBPQ"
+    },
+    {
+        "id":15,
+        "name":"PL_Lab",
+        "title":"no image awailable",
+        "price":1000,
+        "category":"Asgn3",
+        "image":"ass.png",
+        "description":"Boost skills with real-world experience through top internships.",
+        "link": "https://1drv.ms/f/c/fc1755c51a0b0c9f/Ei_uQXtYKqBIt6EyWLBVRvoBhRpwynZXjqb_gat9kswhzg"
+    },
+
+
+
+
+    {
+        "id":10,
+        "name":"UHV",
+        "title":"no image awailable",
+        "price":0,
+        "category":"Asgn3",
+        "image":"ass.png",
+        "description":"Boost skills with real-world experience through top internships.",
+        "link": "https://1drv.ms/f/c/fc1755c51a0b0c9f/Ei_uQXtYKqBIt6EyWLBVRvoBhRpwynZXjqb_gat9kswhzg"
+    }
+    
+]
