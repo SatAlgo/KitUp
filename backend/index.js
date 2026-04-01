@@ -1,24 +1,32 @@
 import express from "express";
-import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors"; // 👈 1. Added CORS import
+import connectDB from "./config/db.js";
+import itemRoute from "./route/item.route.js";
+import userRoute from "./route/user.route.js";
 
-import itemRoute from "./route/item.route.js"
-const app = express();
-
+// Load environment variables
 dotenv.config();
 
-const PORT = process.env.PORT || 4000;
-const URI = process.env.MongoDBURI;
-// connect to mongodb
-try {
-  await mongoose.connect(URI); 
-  console.log("Connected to mongoDB ✅");
-} catch (error) {
-  console.log("Error: ", error);
-}
+const app = express();
+const PORT = process.env.PORT || 4001;
 
-// defining routes
-app.use("/item", itemRoute)
+// 2. Middleware Configuration
+// This allows your React app (5173) to access this API (4001)
+app.use(cors()); 
+app.use(express.json()); 
+
+// Connect to Database
+connectDB();
+
+// Basic Health Check Route
+app.get("/", (req, res) => {
+  res.send("KitUp Backend is running! 🚀");
+});
+
+// Defining routes
+app.use("/item", itemRoute);
+app.use("/user", userRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

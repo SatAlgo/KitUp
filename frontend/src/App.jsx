@@ -13,6 +13,8 @@ import ToolKit from './content/ToolKit';
 import JoinUs from './content/JoinUs';
 import TT from './content/TT';
 import Games from './content/Games'
+import Profile from './components/Profile';
+import UploadItem from './components/UploadItem';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/TT" element={<TT />} />
         <Route path="/TableTT" element={<TT />} />
         <Route path="/Games" element={<Games />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/upload-item" element={<UploadItem />} />
       </Routes>
       </div>
       

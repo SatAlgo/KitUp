@@ -4,22 +4,28 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem('token') || null);
 
-  const login = (userData, userToken) => {
-    localStorage.setItem('token', userToken);
-    setToken(userToken);
+  // Check for user on initial load
+  useEffect(() => {
+    const savedUser = localStorage.getItem('KitUp_User');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
+
+  const login = (userData) => {
+    localStorage.setItem('KitUp_User', JSON.stringify(userData));
     setUser(userData);
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
-    setToken(null);
+    localStorage.removeItem('KitUp_User');
     setUser(null);
+    window.location.reload();
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout }}>
+    <AuthContext.Provider value={{ user, setUser, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
