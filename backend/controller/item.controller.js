@@ -44,7 +44,8 @@ export const getItems = async (req, res) => {
     if (category) query.category = category;
 
     const items = await Item.find(query)
-      .populate("seller", "name surname mobNumber address") // Cleaned up populate
+      // Added "email" to the list of fields to fetch from the User model
+      .populate("seller", "name surname email mobNumber address") 
       .sort({ createdAt: -1 });
 
     res.status(200).json(items);

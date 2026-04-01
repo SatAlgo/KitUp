@@ -1,23 +1,10 @@
-// import express from "express";
-// import { signup, login, verifyOTP } from "../controller/user.controller.js"; // 👈 Add verifyOTP here
-
-
-// const router = express.Router();
-
-// router.post("/signup", signup);
-// router.post("/login", login);
-// router.post("/verify-otp", verifyOTP); // 👈 Now this won't crash
-
-// export default router;
-
 import express from "express";
 import { 
   signup, 
   login, 
   verifyOTP, 
-  sendMobileOTP,           // Added
-  sendPasswordResetOTP,    // Added
-  updatePasswordWithOTP    // Added
+  sendPasswordResetOTP, // This is your "forgot-password" logic
+  updatePasswordWithOTP  // This is your "reset-password" logic
 } from "../controller/user.controller.js";
 
 const router = express.Router();
@@ -26,11 +13,8 @@ router.post("/signup", signup);
 router.post("/login", login);
 router.post("/verify-otp", verifyOTP);
 
-// This is the bypass route for WhatsApp
-router.post("/send-mobile-otp", sendMobileOTP);
-
-// These are for Email-based password reset
-router.post("/send-password-reset-otp", sendPasswordResetOTP);
-router.post("/update-password", updatePasswordWithOTP);
+// Update these two to match your Login.jsx axios calls
+router.post("/forgot-password", sendPasswordResetOTP); 
+router.post("/reset-password", updatePasswordWithOTP);
 
 export default router;

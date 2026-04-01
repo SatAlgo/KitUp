@@ -252,15 +252,23 @@ export const sendMobileOTP = async (req, res) => {
 export const sendPasswordResetOTP = async (req, res) => {
   try {
     const { email } = req.body;
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const user = await User.findOneAndUpdate(
-      { email }, 
-      { resetOtp: otp, resetOtpExpires: new Date(Date.now() + 10 * 60 * 1000) }
-    );
+    const cleanEmail = email.toLowerCase().trim(); // Clean the input
     
-    if (!user) return res.status(404).json({ message: "User not found" });
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    
+    // We use findOne then save to ensure hooks/validation run
+    const user = await User.findOne({ email: cleanEmail });
+    
+    if (!user) {
+      console.log("User not found for email:", cleanEmail);
+      return res.status(404).json({ message: "User not found" });
+    }
 
-    await sendEmailOTP(email, otp); // Reusing Email Service
+    user.resetOtp = otp;
+    user.resetOtpExpires = new Date(Date.now() + 10 * 60 * 1000);
+    await user.save();
+
+    await sendEmailOTP(user.email, otp); 
     res.status(200).json({ message: "Reset OTP sent to your email!" });
   } catch (error) {
     res.status(500).json({ message: "Error", error: error.message });
